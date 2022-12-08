@@ -3,4 +3,4 @@ type PostItem @model @auth(rules: [{allow: public}]) {
   title: String
   date: AWSDate
   content: String
-}
+} 
