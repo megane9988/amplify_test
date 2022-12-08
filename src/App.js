@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import { Amplify } from 'aws-amplify';
+import awsExports from './aws-exports';
+import { Flex } from '@aws-amplify/ui-react';
+import { Postitem, PostitemCollection } from './ui-components';
+
+Amplify.configure(awsExports);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Flex direction={"column"} alignItems={"center"}>
+        <PostitemCollection />
+      </Flex>
     </div>
   );
 }
