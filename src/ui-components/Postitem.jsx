@@ -7,20 +7,20 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Icon, Text, View } from "@aws-amplify/ui-react";
+import { Flex, Icon, Text } from "@aws-amplify/ui-react";
 export default function Postitem(props) {
   const { postItem, overrides, ...rest } = props;
   return (
-    <View
-      width="424px"
-      height="189px"
-      display="block"
-      gap="unset"
-      alignItems="unset"
-      justifyContent="unset"
+    <Flex
+      gap="20px"
+      direction="row"
+      width="unset"
+      height="unset"
+      justifyContent="flex-start"
+      alignItems="center"
       overflow="hidden"
       position="relative"
-      padding="0px 0px 0px 0px"
+      padding="19px 20px 19px 20px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
       {...getOverrideProps(overrides, "Postitem")}
@@ -40,46 +40,43 @@ export default function Postitem(props) {
         gap="unset"
         alignItems="unset"
         justifyContent="unset"
-        position="absolute"
-        top="35px"
-        left="25px"
+        shrink="0"
+        position="relative"
         src="megane.png"
         {...getOverrideProps(overrides, "avator")}
       ></Icon>
-      <View
+      <Flex
+        gap="6px"
+        direction="column"
+        width="unset"
+        height="unset"
+        justifyContent="flex-start"
+        alignItems="flex-start"
+        shrink="0"
+        position="relative"
         padding="0px 0px 0px 0px"
-        width="243px"
-        height="132px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
-        position="absolute"
-        top="40px"
-        left="162px"
         {...getOverrideProps(overrides, "text")}
       >
         <Text
           fontFamily="Inter"
-          fontSize="16px"
+          fontSize="24px"
           fontWeight="400"
           color="rgba(0,0,0,1)"
-          lineHeight="19.363636016845703px"
+          lineHeight="29.045454025268555px"
           textAlign="left"
           display="block"
           direction="column"
           justifyContent="unset"
-          width="243px"
-          height="74px"
+          width="unset"
+          height="unset"
           gap="unset"
           alignItems="unset"
-          position="absolute"
-          top="58px"
-          left="0px"
+          shrink="0"
+          position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children={postItem?.content}
-          {...getOverrideProps(overrides, "content")}
+          children={postItem?.title}
+          {...getOverrideProps(overrides, "Title")}
         ></Text>
         <Text
           fontFamily="Inter"
@@ -95,9 +92,8 @@ export default function Postitem(props) {
           height="unset"
           gap="unset"
           alignItems="unset"
-          position="absolute"
-          top="38px"
-          left="0px"
+          shrink="0"
+          position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children={postItem?.date}
@@ -105,27 +101,26 @@ export default function Postitem(props) {
         ></Text>
         <Text
           fontFamily="Inter"
-          fontSize="24px"
+          fontSize="16px"
           fontWeight="400"
           color="rgba(0,0,0,1)"
-          lineHeight="29.045454025268555px"
+          lineHeight="19.363636016845703px"
           textAlign="left"
           display="block"
           direction="column"
           justifyContent="unset"
-          width="unset"
-          height="unset"
+          width="243px"
+          height="74px"
           gap="unset"
           alignItems="unset"
-          position="absolute"
-          top="0px"
-          left="0px"
+          shrink="0"
+          position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children={postItem?.title}
-          {...getOverrideProps(overrides, "Title")}
+          children={postItem?.content}
+          {...getOverrideProps(overrides, "content")}
         ></Text>
-      </View>
-    </View>
+      </Flex>
+    </Flex>
   );
 }

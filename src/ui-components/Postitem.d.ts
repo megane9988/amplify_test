@@ -7,8 +7,8 @@
 import * as React from "react";
 import { PostItem } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { ViewProps } from "@aws-amplify/ui-react";
-export declare type PostitemProps = React.PropsWithChildren<Partial<ViewProps> & {
+import { FlexProps } from "@aws-amplify/ui-react";
+export declare type PostitemProps = React.PropsWithChildren<Partial<FlexProps> & {
     postItem?: PostItem;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
