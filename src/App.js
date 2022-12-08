@@ -4,6 +4,7 @@ import { Amplify } from 'aws-amplify';
 import awsExports from './aws-exports';
 import { Flex } from '@aws-amplify/ui-react';
 import { PostitemCollection } from './ui-components';
+import '@aws-amplify/ui-react/styles.css';
 
 Amplify.configure(awsExports);
 
