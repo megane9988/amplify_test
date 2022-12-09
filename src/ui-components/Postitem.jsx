@@ -14,13 +14,13 @@ export default function Postitem(props) {
     <Flex
       gap="20px"
       direction="row"
-      width="unset"
-      height="unset"
+      width="518px"
+      height="196px"
       justifyContent="flex-start"
       alignItems="center"
       overflow="hidden"
       position="relative"
-      padding="19px 20px 19px 20px"
+      padding="20px 20px 20px 20px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
       {...getOverrideProps(overrides, "Postitem")}
@@ -54,14 +54,14 @@ export default function Postitem(props) {
         alignItems="flex-start"
         shrink="0"
         position="relative"
-        padding="0px 0px 0px 0px"
+        padding="0px 52px 0px 0px"
         {...getOverrideProps(overrides, "text")}
       >
         <Text
           fontFamily="Inter"
           fontSize="24px"
-          fontWeight="400"
-          color="rgba(0,0,0,1)"
+          fontWeight="700"
+          color="rgba(221,33,33,1)"
           lineHeight="29.045454025268555px"
           textAlign="left"
           display="block"
@@ -109,7 +109,7 @@ export default function Postitem(props) {
           display="block"
           direction="column"
           justifyContent="unset"
-          width="243px"
+          width="216px"
           height="74px"
           gap="unset"
           alignItems="unset"
